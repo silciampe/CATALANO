@@ -33,7 +33,7 @@
 			">Agropartes</a>
 				<ul>
 					<li><a href="<?php echo $pdf['BrwFile']['agro']['path']; ?>" target="_blank">Catalogo online</a></li>
-					<?php echo Router::url(array('controller' => 'agro_products', 'action' => 'catalogo')) ?>">Busqueda</a></li>
+					<li><a href="<?php echo Router::url(array('controller' => 'agro_products', 'action' => 'catalogo')) ?>">Busqueda</a></li>
 					<li><a href="<?php echo Router::url(array('controller' => 'agropartes', 'action' => 'index')) ?>">Imagenes</a></li>
 				</ul>
 			</li>
