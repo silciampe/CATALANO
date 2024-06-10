@@ -38,115 +38,114 @@ class AgroProduct extends AppModel
 			$conditions['AgroProduct.id_catalano'] = $id_catalano;
 		}
 
-		// if (!empty($codigo_original)) {
-		//     $conditions['AgroProduct.codigo_original LIKE'] = '%' . $codigo_original . '%';
-		// }
+		if (!empty($codigo_original)) {
+		    $conditions['AgroProduct.codigo_original LIKE'] = '%' . $codigo_original . '%';
+		}
 
-		// if (!empty($marca)) {
-		//     $conditions['AgroProduct.marca LIKE'] = '%' . $marca . '%';
-		// }
+		if (!empty($marca)) {
+		    $conditions['AgroProduct.marca LIKE'] = '%' . $marca . '%';
+		}
 
-		// if (!empty($modelo)) {
-		//     $conditions['AgroProduct.modelo LIKE'] = '%' . $modelo . '%';
-		// }
+		if (!empty($modelo)) {
+		    $conditions['AgroProduct.modelo LIKE'] = '%' . $modelo . '%';
+		}
 
-		// if (!empty($dtes)) {
-		//     $conditions['AgroProduct.dtes'] = $dtes;
-		// }
+		if (!empty($dtes)) {
+		    $conditions['AgroProduct.dtes'] = $dtes;
+		}
 
-		// if (!empty($cad)) {
-		//     $conditions['AgroProduct.cad'] = $cad;
-		// }
+		if (!empty($cad)) {
+		    $conditions['AgroProduct.cad'] = $cad;
+		}
 
-		// if (!empty($diam_int)) {
-		//     $conditions['AgroProduct.diam_int'] = $diam_int;
-		// }
+		if (!empty($diam_int)) {
+		    $conditions['AgroProduct.diam_int'] = $diam_int;
+		}
 
-		// if (!empty($diam_ex)) {
-		//     $conditions['AgroProduct.diam_ex'] = $diam_ex;
-		// }
+		if (!empty($diam_ex)) {
+		    $conditions['AgroProduct.diam_ex'] = $diam_ex;
+		}
 
-		// if (!empty($can_diam)) {
-		//     $conditions['AgroProduct.can_diam LIKE'] = '%' . $can_diam . '%';
-		// }
+		if (!empty($can_diam)) {
+		    $conditions['AgroProduct.can_diam LIKE'] = '%' . $can_diam . '%';
+		}
 
-		// if (!empty($diam_rod)) {
-		//     $conditions['AgroProduct.diam_rod'] = $diam_rod;
-		// }
+		if (!empty($diam_rod)) {
+		    $conditions['AgroProduct.diam_rod'] = $diam_rod;
+		}
 
-		// if (!empty($paso_esp)) {
-		//     $conditions['AgroProduct.paso_esp LIKE'] = '%' . $paso_esp . '%';
-		// }
+		if (!empty($paso_esp)) {
+		    $conditions['AgroProduct.paso_esp LIKE'] = '%' . $paso_esp . '%';
+		}
 
-		// if (!empty($est_x_esp)) {
-		//     $conditions['AgroProduct.est_x_esp LIKE'] = '%' . $est_x_esp . '%';
-		// }
+		if (!empty($est_x_esp)) {
+		    $conditions['AgroProduct.est_x_esp LIKE'] = '%' . $est_x_esp . '%';
+		}
 		$products = $this->find('all', array(
 			'conditions' => $conditions,
 		));
 		return $products;
 	}
 
-	// function getHightlighted($amount = 6)
-	// {
-	//     return $this->find('all', array(
-	//         'conditions' =>    array(
-	//             'AgroProduct.enabled' => 1,
-	//             'AgroProduct.hightlighted' => 1,
-	//         ),
-	//         'contain' => array('BrwImage'),
-	//         'limit' => $amount,
-	//     ));
-	// }
+	function getHightlighted($amount = 6)
+	{
+	    return $this->find('all', array(
+	        'conditions' =>    array(
+	            'AgroProduct.enabled' => 1,
+	            'AgroProduct.hightlighted' => 1,
+	        ),
+	        'contain' => array('BrwImage'),
+	        'limit' => $amount,
+	   ));
+	}
 
-	// function haveAny($products, $grupo)
-	// {
-	//     if (empty($products)) {
-	//         return false;
-	//     }
-	//     foreach ($products as $product) {
-	//         if ($product['AgroProduct']['grupo'] == $grupo) {
-	//             return true;
-	//         }
-	//     }
-	//     return false;
-	// }
+	function haveAny($products, $grupo)
+	{
+	    if (empty($products)) {
+	        return false;
+	    }
+	    foreach ($products as $product) {
+	        if ($product['AgroProduct']['grupo'] == $grupo) {
+	            return true;
+	        }
+	    }
+	   return false;
+	}
 
-	// function marcasList($grupo)
-	// {
-	//     $marcas = array();
-	//     $marcasList = $this->find('list', array(
-	//         'conditions' => array(
-	//             'grupo' => $grupo,
-	//             'marca NOT' => null,
-	//         ),
-	//         'fields' => array('marca'),
-	//         'group' => 'marca'
-	//     ));
-	//     foreach ($marcasList as $key => $marca) {
-	//         $marcas[$marca] = $marca;
-	//     }
-	//     return $marcas;
-	// }
+	function marcasList($grupo)
+	{
+	    $marcas = array();
+	    $marcasList = $this->find('list', array(
+	        'conditions' => array(
+	            'grupo' => $grupo,
+	            'marca NOT' => null,
+	        ),
+	        'fields' => array('marca'),
+	        'group' => 'marca'
+	    ));
+	    foreach ($marcasList as $key => $marca) {
+	        $marcas[$marca] = $marca;
+	    }
+	    return $marcas;
+	}
 
-
-	// function modelosList($grupo, $marca)
-	// {
-	//     $modelos = array();
-	//     $modelosList = $this->find('list', array(
-	//         'conditions' => array(
-	//             'grupo' => $grupo,
-	//             'marca' => $marca,
-	//             'modelo NOT' => null,
-	//         ),
-	//         'fields' => array('modelo'),
-	//         'group' => 'modelo'
-	//     ));
-	//     foreach ($modelosList as $key => $modelo) {
-	//         $modelos[$modelo] = $modelo;
-	//     }
-	//     return $modelos;
-	// }
+ function modelosList($grupo, $marca)
+ {
+    $modelos = array();
+    $modelosList = $this->find('list', array(
+        'conditions' => array(
+            'grupo' => $grupo,
+            'marca' => $marca,
+            'modelo NOT' => null,
+        ),
+         'fields' => array('modelo'),
+         'group' => 'modelo'
+     ));
+     foreach ($modelosList as $key => $modelo) {
+         $modelos[$modelo] = $modelo;
+     }
+     return $modelos;
+}
 
 	public function brwImport($data)
 	{
