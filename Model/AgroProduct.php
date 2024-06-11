@@ -19,6 +19,7 @@ class AgroProduct extends AppModel
 			),
 		),
 		'actions' => array(
+			'export' => true,
 			'import' => true,
 		),
 		'export' => array('type' => 'xlsx'),
@@ -217,7 +218,7 @@ class AgroProduct extends AppModel
 				case 'CUCHILLAS DURAFLUT 50 ONDAS':
 				case 'DISCOS DE RASTRA':
 				case 'CUCHILLAS DURAFLUT FILO LISO':
-					// print_r($dataExplode);
+					print_r($dataExplode);
 					$dataSave = array(
 						'id' => null,
 						'id_catalano' => trim($dataExplode[1]),

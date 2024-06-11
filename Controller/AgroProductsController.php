@@ -212,7 +212,7 @@ class AgroProductsController extends AppController
         foreach ($products as $i => $product) {
             $products[$i]['BrwImage'] = $product['AgroProduct']['BrwImage'];
         }
-        pr($products);
+        /*pr($products);
 
 		$conditions = array(
 			'AgroProduct.enabled' => 1,
@@ -225,7 +225,7 @@ class AgroProductsController extends AppController
 			'contain' => array('BrwImage'),
 		);
 		$products = $this->paginate('AgroProduct');
-		pr($products);
+		pr($products);*/
         $this->set('products', $products);
 
         $crumb = array(
