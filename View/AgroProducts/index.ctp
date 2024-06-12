@@ -32,8 +32,8 @@
                             <td><?php echo  $product['AgroProduct']['esp_mm']; ?></td>
                             <td style="max-width: 200px; overflow-wrap: break-word; "><?php echo  $product['AgroProduct']['marca']; ?></td>
                             <td style="max-width: 200px; overflow-wrap: break-word; "><?php echo  $product['AgroProduct']['observacion']; ?></td>
-                            <td><?php if (!empty($product['AgroProduct']['imagen']) and file_exists('img/agropartesImg/' . $product['AgroProduct']['imagen'])) { ?>
-                                    <a class="brw_image" href="<?php echo Router::url('/img/agropartesImg/' . $product['AgroProduct']['imagen']); ?>">imagen</a>
+                            <td><?php if (!empty($product['AgroProduct']['imagen']) and file_exists('img/productImg/' . $product['AgroProduct']['imagen'])) { ?>
+                                    <a class="brw_image" href="<?php echo Router::url('/img/productImg/' . $product['AgroProduct']['imagen']); ?>">imagen</a>
                                 <?php } ?>
                             </td>
                         </tr>
