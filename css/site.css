@@ -1,0 +1,1301 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+/* reseter */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+table,
+td {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+:focus {
+  outline: 0;
+}
+body {
+  color: black;
+  background: white;
+  font-family: Arial;
+  font-size: 10px;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+/* base */
+/* clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+  display: block;
+}
+/* End hide from IE Mac */
+/* text from database */
+.html_text {
+  font-size: 13px;
+  font-family: Verdana;
+  /*color: #707070;*/
+  line-height: 17px;
+}
+.html_text table td {
+  border: 1px solid #ccc;
+  padding: .3em;
+}
+.html_text ul,
+.html_text ol,
+.html_text p,
+.html_text table {
+  margin-bottom: 1em;
+}
+.html_text ul,
+.html_text ul li {
+  list-style-type: disc;
+}
+.html_text ol,
+.html_text ol li {
+  list-style-type: decimal;
+}
+.html_text li {
+  margin-left: 2em;
+}
+.html_text strong,
+.html_text b,
+.html_text td strong,
+.html_text td b {
+  font-weight: bold;
+}
+.html_text em {
+  font-style: italic;
+}
+.html_text a {
+  text-decoration: underline;
+}
+/* flash messages */
+.alert,
+.flash {
+  padding: .8em;
+  padding-left: 28px;
+  margin: 1em 0;
+  border: 2px solid #ddd;
+  background: 6px center no-repeat;
+  font-weight: bold;
+}
+.flash_error {
+  background-color: #FBE3E4;
+  background-image: url(img/dialog-error.png);
+  color: #8a1f11;
+  border-color: #FBC2C4;
+}
+.alert-info {
+  background-color: #FFF6BF;
+  background-image: url(img/dialog-warning.png);
+  color: #514721;
+  border-color: #FFD324;
+}
+.alert-success {
+  background-color: #E6EFC2;
+  background-image: url(img/emblem-default.png);
+  color: #264409;
+  border-color: #C6D880;
+}
+/* IE6 notice */
+.ie6 {
+  background: #D22521;
+  text-align: center;
+  height: 30px;
+}
+.ie6 div {
+  color: #fff;
+  font-size: 14px;
+  width: 960px;
+  padding-top: 4px;
+}
+.ie6 p {
+  font-weight: bold;
+  display: inline;
+}
+.ie6 ul {
+  display: inline;
+}
+.ie6 li {
+  margin-left: 5px;
+  font-size: 12px;
+  display: inline;
+}
+.ie6 a {
+  color: #fff;
+}
+.ie6 a:hover {
+  text-decoration: underline;
+}
+/* pagination */
+div.pagination {
+  border: 0px dashed green;
+  float: right;
+  width: 700px;
+  margin-bottom: 25px;
+}
+div.pagination span {
+  display: block;
+  float: left;
+}
+div.pagination a,
+div.pagination span.current {
+  width: 23px;
+  height: 22px;
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0 2px;
+  font-size: 12px;
+  font-family: arial;
+  font-weight: normal;
+  color: #757E82;
+  border: 1px solid #D7D7D7;
+  padding: 6px 0 0 0;
+  text-decoration: none;
+}
+div.pagination span.current {
+  border: 1px solid #D7D7D7;
+  color: #000;
+}
+div.pagination a:hover {
+  background: #FF6600;
+  color: #fff;
+}
+div.pagination span.next,
+div.pagination span.prev {
+  display: block;
+  border: 0;
+}
+div.pagination span.prev a,
+div.pagination span.next a {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+div.pagination span.next {
+  margin-left: 11px;
+  border: 0px solid red;
+  display: block;
+  width: 30px;
+  height: 37px;
+}
+div.pagination span.prev {
+  margin-right: 11px;
+  border: 0px solid red;
+  display: block;
+  width: 30px;
+  height: 37px;
+}
+/* contact form */
+.contact {
+  margin-left: 10px;
+}
+.contact form fieldset legend {
+  display: none;
+}
+.contact form div {
+  padding: .5em;
+  vertical-align: text-top;
+}
+.contact form .required label:after {
+  display: inline;
+}
+.contact form label {
+  display: block;
+  margin-bottom: .2em;
+  font-size: 12px;
+}
+.contact form input,
+.contact form textarea {
+  font-size: 1.1em;
+  clear: both;
+  padding: .25em;
+  width: 90%;
+  font-family: inherit;
+}
+.contact form textarea {
+  height: 6em;
+  overflow: auto;
+}
+.contact form .submit input {
+  width: 87px;
+  height: 37px;
+  background: url('img/enviar.jpg') no-repeat;
+  border: 0;
+  float: right;
+  margin-right: 20px;
+}
+.contact form input,
+.contact form textarea {
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+  background-color: #EDEDED;
+}
+.contact form .submit input {
+  background-color: #0492D4;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-color: 1px solid #D9D9D9;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  background-color: #ddd;
+  /*border-color: #0492D4;*/
+}
+.contacto_izq {
+  width: 320px;
+  float: left;
+}
+.contacto_der {
+  width: 320px;
+  float: right;
+}
+.contact form .required {
+  background: url('img/campo_obligatorio.gif') 300px 30px no-repeat;
+  border: 0px solid red;
+}
+#datos_obli {
+  color: #DC2402;
+  padding-bottom: 5px;
+}
+.error-message {
+  color: #DC2600;
+}
+body {
+  color: #004b85;
+  font-family: Arial, serif;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+a {
+  cursor: pointer;
+}
+h2 {
+  color: #222;
+  font-weight: bold;
+}
+div.input input,
+div.input select,
+div.input textarea {
+  background-color: #fff0c1;
+  padding: 4px;
+  border: none;
+  color: #004b85;
+}
+div.input select {
+  padding: 2px;
+}
+div.open {
+  display: none;
+}
+div.main {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.main-header {
+  background: #808084;
+  border-top: 5px solid #ffcd2f;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.main-header a.logo {
+  display: block;
+  width: 215px;
+  height: 45px;
+  margin: 5px 0 0 20px;
+  float: left;
+}
+.main-header ul.sf-menu {
+  float: right;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.main-header ul.sf-menu li {
+  background: #808084;
+  border: 0;
+  padding: 15px 12px 0px 12px;
+}
+.main-header ul.sf-menu li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #ffc425;
+  text-decoration: none;
+  border: none;
+  padding-bottom: 16px;
+}
+.main-header ul.sf-menu li ul {
+  width: 175px;
+  margin: 0 0 0 10px;
+}
+.main-header ul.sf-menu li ul li {
+  padding: 0px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+.main-header ul.sf-menu li ul li a {
+  padding: 12px 15px;
+}
+.main-header ul.sf-menu li ul li a:hover {
+  background: #9a9a9d;
+}
+div.image-header {
+  clear: both;
+  height: 280px;
+  background: url(img/img-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3px;
+  display: block;
+}
+div.boton-big {
+  clear: both;
+  min-height: 245px;
+  background: #ffcd2f;
+  margin-bottom: 3px;
+  display: block;
+}
+div.boton-big .conatain-botom {
+  max-width: 794px;
+  margin: auto;
+}
+div.boton-big .conatain-botom ul li {
+  margin-top: 18px;
+  text-align: center;
+}
+.section-empresa {
+  clear: both;
+  margin-bottom: 3px;
+  display: block;
+  padding: 0 15px;
+}
+.section-empresa .derecha .empresa-historia {
+  clear: both;
+  height: 187px;
+  padding-top: 80px;
+  background: #A3A4A7;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.section-empresa .derecha .empresa-historia a {
+  text-transform: uppercase;
+  font-size: 23px;
+  color: #FFCD2F;
+  text-decoration: none;
+}
+.section-empresa .derecha .certificados {
+  background: #ffcd2f;
+  min-height: 191px;
+}
+.section-empresa .derecha .certificados .conatain-certificados {
+  margin: auto;
+}
+.section-empresa .derecha .certificados .conatain-certificados ul {
+  text-align: center;
+}
+.section-empresa .derecha .certificados .conatain-certificados ul li {
+  margin: 15px 35px 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.catalogo-moto-home,
+.catalogo-agro-home {
+  height: 376px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 3px;
+  clear: both;
+  position: relative;
+}
+.catalogo-moto-home h1,
+.catalogo-agro-home h1 {
+  text-transform: uppercase;
+  font-size: 23px;
+  color: #ffcd2f;
+  padding: 10px 20px 0 20px;
+}
+.catalogo-moto-home .catalogo-link,
+.catalogo-agro-home .catalogo-link {
+  max-width: 435px;
+  min-height: 46px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -23px;
+  padding: 0 25px;
+}
+.catalogo-moto-home .catalogo-link p,
+.catalogo-agro-home .catalogo-link p,
+.catalogo-moto-home .catalogo-link a,
+.catalogo-agro-home .catalogo-link a {
+  display: inline-block;
+  color: #ffcd2f;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 100;
+  font-family: "Helvetica Neue";
+  line-height: 46px;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+.catalogo-moto-home .catalogo-link a:last-child,
+.catalogo-agro-home .catalogo-link a:last-child {
+  margin-right: 0;
+}
+.catalogo-moto-home.catalogo-moto-home,
+.catalogo-agro-home.catalogo-moto-home {
+  background: url(img/catalogo-moto-home-alt.jpg);
+}
+.catalogo-moto-home.catalogo-moto-home .catalogo-link,
+.catalogo-agro-home.catalogo-moto-home .catalogo-link {
+  background-color: rgba(0, 75, 133, 0.8);
+  background: none\9;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc004b85', endColorstr='#cc004b85');
+  left: 40px;
+}
+.catalogo-moto-home.catalogo-moto-home .catalogo-link:not([dummy]),
+.catalogo-agro-home.catalogo-moto-home .catalogo-link:not([dummy]) {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+}
+.catalogo-moto-home.catalogo-agro-home,
+.catalogo-agro-home.catalogo-agro-home {
+  background: url(img/catalogo-agro-home-alt.jpg);
+}
+.catalogo-moto-home.catalogo-agro-home h1,
+.catalogo-agro-home.catalogo-agro-home h1 {
+  text-align: right;
+}
+.catalogo-moto-home.catalogo-agro-home .catalogo-link,
+.catalogo-agro-home.catalogo-agro-home .catalogo-link {
+  background-color: rgba(0, 133, 62, 0.8);
+  background: none\9;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc00853e', endColorstr='#cc00853e');
+  right: 40px;
+}
+.catalogo-moto-home.catalogo-agro-home .catalogo-link:not([dummy]),
+.catalogo-agro-home.catalogo-agro-home .catalogo-link:not([dummy]) {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+}
+div.club {
+  min-height: 177px;
+  margin-bottom: 3px;
+  /*
+	background: url(img/club.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	*/
+  background-color: #a3a4a7;
+  clear: both;
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+div.club h2 {
+  color: #ffcd2f;
+  font-family: "Helvetica Neue";
+  font-size: 29px;
+  font-weight: 400;
+  margin: 50px 0;
+}
+div.club .img-responsive {
+  margin: 0 auto;
+}
+div.club .btn-club {
+  width: 196px;
+  height: 48px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #ffcd2f;
+  line-height: 48px;
+  text-align: center;
+  color: #807f83;
+  font-family: "Lucida Grande";
+  font-size: 21px;
+  font-weight: 300;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 2px #000000;
+  box-shadow: 0 1px 2px #000000;
+  margin: 50px 0 0;
+}
+.noticias-section {
+  clear: both;
+  background: #ffcd2f;
+  padding-bottom: 20px;
+  margin-bottom: 3px;
+  display: block;
+}
+.noticias-section h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #ffcd2f;
+  padding: 6px 50px 0 20px;
+  background: #808084;
+  text-align: right;
+  height: 38px;
+  margin: 0 0 22px 0;
+}
+.noticias-section .lista-noticias {
+  padding: 0 30px;
+}
+.noticias-section .lista-noticias .index-image {
+  width: 222px;
+  height: 221px;
+  display: block;
+}
+.noticias-section .lista-noticias .index-image img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.noticias-section .lista-noticias .info-post {
+  display: block;
+  margin: 11px 0 30px 30px;
+  background: #ffda65;
+  padding: 12px 23px 3px 23px;
+  overflow: hidden;
+}
+.noticias-section .lista-noticias .info-post h2 {
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #004b85;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+.noticias-section .lista-noticias .info-post h2 a {
+  text-decoration: none;
+}
+.noticias-section .lista-noticias .info-post .index-date {
+  margin: 0 0 10px 0;
+}
+.noticias-section .lista-noticias .info-post ._abstract {
+  margin: 0 0 10px 0;
+}
+.noticias-section .lista-noticias .info-post .html_text {
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  color: #807f83;
+  height: 80px;
+}
+.noticias-section .lista-noticias .info-post .vermaspost {
+  margin: 0 0 10px 0;
+  display: block;
+  text-align: right;
+  color: #004b85;
+  margin-right: -13px;
+  text-decoration: none;
+}
+.main-footer {
+  color: #fff;
+  background-color: #808084;
+  padding: 15px 20px 0px 20px;
+  text-align: center;
+  margin-bottom: 0;
+  *zoom: 1;
+  display: inline-block;
+  display: block;
+}
+.main-footer:before,
+.main-footer:after {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.main-footer:after {
+  clear: both;
+}
+.main-footer p {
+  margin-bottom: 3px;
+  text-align: center;
+}
+.main-footer .data_fiscal {
+  width: 30px;
+  padding: 0;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.main-footer .data_fiscal img {
+  width: 30px;
+}
+.main-footer .face {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(img/logo-face.png);
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index-posts {
+  border-top: 3px solid #fff;
+}
+.index-posts h1.index {
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #004B85;
+  padding: 20px 100px 0 20px;
+  background: none;
+  height: 38px;
+  text-align: left;
+  font-weight: bold;
+}
+.noticias .pagination-posts {
+  text-align: center;
+  font-size: 16px;
+}
+.noticias .pagination-posts span {
+  padding: 5px;
+}
+.noticias .pagination-posts span a {
+  text-decoration: none;
+}
+.noticias p.index-date,
+.noticias p._abstract {
+  color: #807f83;
+}
+.contain {
+  border-top: 3px solid #fff;
+  padding: 35px 20px;
+  background-color: #ffcd2f;
+  margin-bottom: 3px;
+  min-height: 300px;
+}
+.yellow {
+  background: #fccc49;
+}
+.contain .left {
+  width: 339px;
+  float: left;
+  margin: 0 25px 0 0;
+}
+.contain .left img {
+  margin-bottom: 20px;
+}
+.contain .right {
+  width: 520px;
+  float: left;
+}
+.contain h1 {
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #004b85;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+.contain .left .gallery ul {
+  width: 345px;
+}
+.contain .gallery li {
+  width: 110px;
+  height: 110px;
+  float: left;
+  text-align: center;
+  margin: 0 3px 3px 0;
+}
+.empresa {
+  clear: both;
+}
+.section-empresa-internal .gallery-empresa .gallery li {
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  float: none;
+}
+.section-empresa-internal .gallery-empresa .gallery li img {
+  max-width: 100%;
+}
+.section-certificacion-internal .gallery li {
+  width: auto;
+  height: auto;
+  margin: 0 30px 20px 0;
+  display: inline-block;
+}
+.contain div {
+  margin-bottom: 10px;
+}
+.empresa .left {
+  margin-right: 40px;
+}
+.empresa .left img {
+  margin-bottom: 65px;
+}
+.catalogo {
+  float: left;
+  margin: 0;
+}
+.line {
+  padding: 0 30px 0 0;
+  border-right: 1px solid #fff;
+}
+.catalogo div.input input {
+  width: 120px;
+}
+.catalogo li {
+  margin: 0 0 10px 0;
+  list-style: none;
+}
+.catalogo li a {
+  color: #004b85;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.catalogo h3 {
+  color: #004b85;
+  text-decoration: none;
+  margin: 0 0 15px 0;
+  font-weight: none;
+}
+ul.catalogo li div.input {
+  padding: 5px 0 5px 0;
+  margin: 0;
+}
+ul.catalogo li div.select {
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+ul.catalogo li div.submit {
+  padding: 5px 0 0 0;
+}
+ul.ulporcategoria {
+  margin: 0 0 20px 15px;
+}
+ul.ulporcategoria li a {
+  display: block;
+  width: 100px;
+  background: url(img/ampliar.png) no-repeat right;
+  padding: 2px 30px 1px 0;
+  text-transform: uppercase;
+}
+.BusquedaDirecta select {
+  width: 130px;
+}
+.BusquedaAvanzada select {
+  width: 128px;
+}
+.BusquedaDirecta {
+  clear: both;
+}
+.BusquedaDirecta .Marca,
+.BusquedaDirecta .Modelo {
+  margin: 0;
+  padding: 0;
+}
+.BusquedaCodigo form label,
+.BusquedaAvanzada form label,
+.BusquedaDirecta form label {
+  width: 85px;
+  text-align: left;
+  display: block;
+  float: left;
+  padding: 3px 0 0 0;
+}
+.catalogo .BusquedaCodigo {
+  margin-bottom: 20px;
+}
+.BusquedaDirecta form label {
+  width: 65px;
+}
+.BusquedaDirecta form .submit input {
+  margin-left: 70px;
+}
+.BusquedaCodigo form label {
+  width: 95px;
+}
+.BusquedaCodigo form .submit input {
+  margin-left: 100px;
+}
+.BusquedaAvanzada form label {
+  width: 95px;
+}
+.BusquedaAvanzada form .submit input {
+  margin-left: 100px;
+}
+.BusquedaCodigo div,
+.BusquedaAvanzada div,
+.BusquedaDirecta div {
+  clear: both;
+}
+.BusquedaCodigo form input,
+.BusquedaAvanzada form input,
+.BusquedaDirecta form input {
+  float: left;
+}
+.catalogo label {
+  margin-right: 5px;
+}
+ul.catalogo li div.todosInput,
+ul.catalogo li div.camposSoloCorona,
+ul.catalogo li div.camposSoloPiñon {
+  padding: 0;
+}
+#product_index table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+#product_index table th {
+  background: #fff;
+  color: #808084;
+  padding: 6px 5px;
+  vertical-align: bottom;
+  border: 1px solid #fff;
+}
+#product_index table td {
+  padding: 5px;
+  border: 1px solid #fff;
+}
+.index-agropartes ul li a,
+.index-album ul li a {
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.index-agropartes ul,
+.index-album ul {
+  margin-left: 60px;
+}
+.index-agropartes ul li,
+.index-album ul li {
+  margin: 0 0 10px 0;
+  list-style: square;
+}
+.index-agropartes .contain_list_image img {
+  margin: auto;
+}
+.login div {
+  margin-bottom: 5px;
+}
+.login form label {
+  width: 98px;
+  text-align: right;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  padding-top: 3px;
+}
+.login form input {
+  float: left;
+}
+.login .submit {
+  margin: 5px 0 0 102px;
+}
+.album .gallery li {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 150px;
+  height: 120px;
+}
+.welcome,
+h1.order-title {
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.info_cliente .contain_welcome {
+  background-color: #ffdf7c;
+  border-top: 4px solid #024c85;
+  padding: 8px;
+  margin-bottom: 7px;
+}
+.green .info_cliente .contain_welcome {
+  border-top: 4px solid #00853E;
+}
+.puntos,
+.text_puntos {
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.puntos {
+  color: #024c85;
+  font-weight: bold;
+}
+.estimado {
+  color: #024c85;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.nota {
+  color: #000;
+  margin-bottom: 15px;
+}
+.texto_dinamico {
+  margin: 0;
+}
+.texto_dinamico p {
+  color: #000;
+  margin-bottom: 15px;
+}
+.texto_dinamico p.pregunta {
+  color: #024c85;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.info_cliente .texto {
+  padding: 0 10px;
+  font-size: 13px;
+}
+.points {
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+}
+.green .points {
+  color: #00853E;
+}
+.club_index .index-award {
+  clear: both;
+  margin-bottom: 20px;
+}
+.index-award .index-name {
+  border-top: 4px solid #024c85;
+  background-color: #fff;
+  padding: 5px;
+  clear: both;
+  margin: 0;
+}
+.index-award .new {
+  background: #ffffff url(img/producto_nuevo.png) no-repeat right;
+}
+.green .index-award .index-name {
+  border-top: 4px solid #00853E;
+}
+.index-award .index-info {
+  border-bottom: 4px solid #024c85;
+  background-color: #ffdf7c;
+  padding: 25px;
+  clear: both;
+}
+.green .index-award .index-info {
+  border-bottom: 4px solid #00853E;
+}
+/*
+.index-award .index-image {
+	margin: 0 15px 0px 0;
+
+}
+
+.index-award .index-info h2 {
+	margin: 0 0 6px 0;
+	font-size: 15px;
+}
+
+.index-award .index-info .points {
+	margin-top: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: right;
+}
+*/
+.contact_send {
+  /*margin-left: 10px;*/
+}
+.contact_send form {
+  width: 70%;
+  margin: auto;
+}
+.contact_send form fieldset legend {
+  display: none;
+}
+.contact_send form div {
+  /*	padding: .5em;*/
+  vertical-align: text-top;
+}
+.contact_send form .required label:after {
+  display: inline;
+}
+.contact_send form label {
+  display: block;
+  margin-bottom: .2em;
+  font-size: 12px;
+}
+.contact_send form input,
+.contact_send form textarea {
+  font-size: 1.1em;
+  clear: both;
+  padding: .25em;
+  width: 100%;
+  font-family: inherit;
+}
+.contact_send form textarea {
+  height: 6em;
+  overflow: auto;
+}
+.contact_send form .submit input {
+  width: 87px;
+  height: 37px;
+  /*	background: url('img/enviar.jpg') no-repeat;*/
+  border: 0;
+  float: right;
+  margin-right: 20px;
+}
+.contact_send h1 {
+  padding-top: 0px;
+  margin-top: -15px;
+}
+.title_line_color {
+  margin: 0 0 0 0;
+  text-transform: uppercase;
+  font-size: 23px;
+  color: #ffcd2f;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  background-color: #00853e;
+  border-top: 3px solid #fff;
+}
+.blue {
+  background-color: #004b85;
+}
+.product_catalogo {
+  border: none;
+  padding: 60px 27px 0px 27px;
+}
+.index-agropartes {
+  border: none;
+  padding: 60px 27px 0px 27px;
+}
+.index-agropartes .image_agro img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.product_index_container {
+  clear: both;
+}
+.login h1 {
+  color: #004B85;
+  margin-bottom: 20px;
+}
+.login .input {
+  margin-bottom: 20px;
+  clear: both;
+}
+.login {
+  padding-top: 20px;
+}
+.contain_login {
+  max-width: 400px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.img_beneficio_fija {
+  margin: 60px auto 0;
+  display: block;
+  text-align: center;
+}
+.info_cliente .logo-club {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.info_cliente .logo-club img {
+  padding: 0;
+  margin: 0;
+}
+.club_index .right {
+  margin-top: -22px;
+}
+.index-award .index-name h2 {
+  color: #114c82;
+  font-size: 18px;
+  padding: 20px 0 20px 14px;
+  display: block;
+  float: left;
+}
+.index-award .index-image-award {
+  width: 158px;
+  height: 107px;
+  margin: 0px;
+  float: left;
+}
+.index-info .gallery {
+  margin: 20px 0 0 0;
+}
+.index-info .gallery li {
+  width: 60px;
+  height: 60px;
+}
+.center {
+  text-align: center;
+  font-weight: bold;
+}
+.main .club_index #flashMessage {
+  margin-bottom: 25px;
+}
+.slicknav_menu {
+  display: none;
+  background-color: transparent;
+}
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #ffcd2f;
+}
+.slicknav_menu .slicknav_row:hover {
+  background-color: #ffcd2f;
+}
+.block-table-cart table thead tr th {
+  background-color: #808084;
+  color: #ffc425;
+}
+.block-table-cart-footer {
+  background-color: #ffc425;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  padding: 15px;
+  clear: both;
+  margin-bottom: 20px;
+}
+.block-table-cart-footer .input.textarea {
+  display: block;
+}
+.block-table-cart-footer .input.textarea label {
+  display: block;
+  font-weight: bold;
+}
+.block-table-cart-footer .input.textarea textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  min-height: 100px;
+}
+.order-form {
+  margin-bottom: 30px;
+}
+.order-form label {
+  font-weight: bold;
+}
+.login-header {
+  margin: 10px auto;
+}

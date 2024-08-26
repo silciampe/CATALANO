@@ -1,0 +1,258 @@
+/* base */
+
+/* clearfix */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+ /* End hide from IE Mac */
+
+
+/* text from database */
+
+.html_text{
+	font-size: 13px;
+	font-family: Verdana;
+	/*color: #707070;*/
+	line-height: 17px;
+}
+
+.html_text table td{
+	border: 1px solid #ccc;
+	padding: .3em;
+}
+
+.html_text ul, .html_text ol, .html_text p, .html_text table{
+	margin-bottom: 1em;
+}
+
+.html_text ul, .html_text ul li{
+    list-style-type: disc;
+}
+
+.html_text ol, .html_text ol li{
+    list-style-type: decimal;
+}
+
+.html_text li{
+    margin-left: 2em;
+}
+
+.html_text strong, .html_text b, .html_text td strong, .html_text td b {
+	font-weight: bold;
+}
+.html_text em{
+	font-style:italic;
+}
+
+.html_text a{
+	text-decoration: underline;
+}
+
+/* flash messages */
+
+.alert, .flash {
+	padding: .8em;
+	padding-left: 28px;
+	margin: 1em 0;
+	border: 2px solid #ddd;
+	background: 6px center no-repeat;
+	font-weight: bold;
+}
+.flash_error {
+	background-color: #FBE3E4;
+	background-image: url(img/dialog-error.png);
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+.alert-info {
+	background-color: #FFF6BF;
+	background-image: url(img/dialog-warning.png);
+	color: #514721;
+	border-color: #FFD324;
+}
+.alert-success {
+	background-color: #E6EFC2;
+	background-image: url(img/emblem-default.png);
+	color: #264409;
+	border-color: #C6D880;
+}
+
+/* IE6 notice */
+.ie6 {
+	background: #D22521;
+	text-align: center;
+	height: 30px;
+}
+
+.ie6 div{
+	color: #fff;
+	font-size: 14px;
+	width: 960px;
+	padding-top: 4px;
+}
+
+.ie6 p{
+	font-weight: bold;
+	display: inline;
+}
+
+.ie6 ul{
+ 	display: inline;
+}
+
+.ie6 li{
+	margin-left: 5px;
+	font-size: 12px;
+	display: inline;
+}
+
+.ie6 a{
+	color: #fff;
+}
+
+.ie6 a:hover{
+	text-decoration: underline;
+}
+
+/* pagination */
+div.pagination {
+	border:0px dashed green;
+	float: right;
+	width: 700px;
+	margin-bottom: 25px;
+}
+div.pagination span{
+	display: block;
+	float: left;
+}
+div.pagination a, div.pagination span.current{
+	width: 23px;
+	height: 22px;
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 0 2px;
+	font-size: 12px;
+	font-family: arial;
+	font-weight: normal;
+	color: #757E82;
+	border: 1px solid #D7D7D7;
+	padding: 6px 0 0 0;
+	text-decoration: none;
+}
+div.pagination span.current{
+	border: 1px solid #D7D7D7;
+	color: #000;
+}
+div.pagination a:hover{
+	background: #FF6600;
+	color: #fff;
+}
+div.pagination span.next, div.pagination span.prev{
+	display: block;
+	border:0;
+}
+div.pagination span.prev a,
+div.pagination span.next a{
+	border:0;
+	margin:0;
+	padding:0;
+	background:none;
+}
+div.pagination span.next{
+	margin-left: 11px;
+	border: 0px solid red;
+	display: block;	
+	width: 30px;
+	height: 37px;	
+} 
+div.pagination span.prev{
+	margin-right: 11px;
+	border: 0px solid red;
+	display: block;	
+	width: 30px;
+	height: 37px;
+}
+
+
+/* contact form */
+.contact{
+	margin-left: 10px;
+}
+.contact form fieldset legend {
+	display: none;
+}
+.contact form div {
+	padding: .5em;
+	vertical-align: text-top;
+}
+.contact form .required label:after {
+	display:inline;
+}
+.contact form label {
+	display: block;
+	margin-bottom: .2em;
+	font-size: 12px;
+}
+.contact form input, .contact form textarea{
+	font-size: 1.1em;
+	clear: both;
+	padding: .25em;
+	width: 90%;
+	font-family: inherit;
+}
+.contact form textarea{
+	height: 6em;
+	overflow: auto;
+}
+.contact form .submit input {
+	width: 87px;
+	height: 37px;
+	background: url('img/enviar.jpg') no-repeat;
+	border:0;
+	float:right;
+	margin-right: 20px;
+}
+
+.contact form input, .contact form textarea{
+	border: 1px solid #ccc;
+	font-size: 1.1em;
+	background-color:#EDEDED;
+}
+.contact form .submit input {
+	background-color: #0492D4;
+	font-weight: bold;
+	padding: 4px 8px;
+	border-color: 1px solid #D9D9D9;
+}
+.contact form input:focus, .contact form textarea:focus{
+	background-color: #ddd;
+ /*border-color: #0492D4;*/
+}
+.contacto_izq{
+	width:320px;
+	float: left;
+}
+.contacto_der{
+	width:320px;
+	float: right;
+}
+.contact form .required{
+	background: url('img/campo_obligatorio.gif') 300px 30px no-repeat;
+	border:0px solid red;
+}
+#datos_obli{
+	color:#DC2402;
+	padding-bottom:5px;
+}
+.error-message{
+	color:#DC2600;
+}

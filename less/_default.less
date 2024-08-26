@@ -1,0 +1,1083 @@
+body{
+	color: #004b85;
+	font-family: Arial, serif;
+	font-size: 13px;
+	padding:0;
+	margin:0;
+}
+
+a {
+	cursor:pointer;
+}
+
+h2 {
+	color:#222;
+	font-weight: bold;
+}
+
+div.input input, div.input select, div.input textarea{
+	background-color: #fff0c1;
+	padding: 4px;
+	border:none;
+	color: #004b85;
+}
+
+div.input select{
+	padding: 2px;	
+}
+
+div.open{
+	display: none;
+}
+
+div.main {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.main-header{
+	background: #808084;
+	border-top: 5px solid #ffcd2f; 
+	padding: 0;
+	margin: 0;
+	display: block;
+	a.logo {
+		display: block;
+		width: 215px;
+		height: 45px;
+		margin:5px 0 0 20px;
+		float:left;
+	}
+
+	ul.sf-menu{
+		float: right;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		li{
+			background: #808084;
+			border: 0;
+			padding: 15px 12px 0px 12px;
+			a{
+				text-transform: uppercase;
+				font-size: 12px;
+				color: #ffc425;
+				text-decoration: none;
+				border: none;
+				padding-bottom: 16px;
+			}
+			ul{
+				width: 175px;
+				margin:0 0 0 10px;
+				li{
+					padding: 0px;
+					border-top: 1px solid #aaa;
+					border-left: 1px solid #aaa;
+					a{
+						padding: 12px 15px;
+						&:hover{
+							background: #9a9a9d;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+div.image-header {
+	clear: both;
+	height: 280px;
+	background: url(img/img-header.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3px;
+	display: block;
+}
+
+div.boton-big {
+	clear: both;
+	min-height: 245px;
+	background: #ffcd2f;
+	margin-bottom: 3px;
+	display: block;
+	.conatain-botom {
+		max-width: 794px;
+		margin:auto;
+		ul {
+			li{
+				margin-top: 18px;
+				text-align: center;
+			}
+		}
+	}
+
+
+}
+
+
+
+
+
+.section-empresa {
+	clear: both;
+	margin-bottom: 3px;
+	display: block;
+	padding: 0 15px;
+	.derecha{
+		.empresa-historia {
+			clear: both;
+			height: 187px;
+			padding-top: 80px;
+			background: #A3A4A7;
+			margin-bottom: 3px;
+			text-align: center;
+			a{
+				text-transform: uppercase;
+				font-size: 23px;
+				color: #FFCD2F;
+				text-decoration: none;
+			}
+		}
+
+		.certificados {
+			background: #ffcd2f;
+			min-height: 191px;
+			.conatain-certificados {
+				margin:auto;	
+				ul{
+					text-align: center;
+					li{
+						margin:15px 35px 10px;
+						display: inline-block;
+						vertical-align:middle;
+					}
+				}	
+			}
+		}
+	}
+}
+
+
+
+.catalogo-moto-home,
+.catalogo-agro-home {
+	height: 376px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: 3px;
+	clear: both;
+	position: relative;
+	h1{
+		text-transform: uppercase;
+		font-size: 23px;
+		color: #ffcd2f;
+		padding: 10px 20px 0 20px;
+	}
+
+	.catalogo-link{
+		max-width: 435px;
+		min-height: 46px;
+		.border-radius(5px);
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -23px;
+		padding: 0 25px;
+		p,a{
+			display: inline-block;
+			color: #ffcd2f;
+			text-decoration: none;
+			font-size: 24px;
+			font-weight: 100;
+			font-family: "Helvetica Neue";
+			line-height: 46px;
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+		a:last-child{
+			margin-right: 0;
+		}
+	}
+
+	&.catalogo-moto-home{
+		background: url(img/catalogo-moto-home-alt.jpg);
+
+		.catalogo-link{
+			.background-opacity(#004b85, 0.8);
+			left: 40px;
+		}
+	}
+
+	&.catalogo-agro-home{
+		background: url(img/catalogo-agro-home-alt.jpg);
+		h1{
+			text-align: right;
+		}
+
+		.catalogo-link{
+			.background-opacity(#00853e, 0.8);
+			right: 40px;
+		}
+	}
+
+	
+}
+
+
+
+div.club {
+	min-height: 177px;
+	margin-bottom: 3px;
+	/*
+	background: url(img/club.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	*/
+	background-color: #a3a4a7;
+	clear: both;
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+	h2{
+		color: #ffcd2f;
+		font-family: "Helvetica Neue";
+		font-size: 29px;
+		font-weight: 400;
+		margin: 50px 0;
+	}
+	
+	.img-responsive{
+		margin: 0 auto;
+	}
+
+	.btn-club{
+		width: 196px;
+		height: 48px;
+		display: inline-block;
+		.border-radius(5px);
+		background-color: #ffcd2f;
+		line-height: 48px;
+		text-align: center;
+		color: #807f83;
+		font-family: "Lucida Grande";
+		font-size: 21px;
+		font-weight: 300;
+		text-decoration: none;
+		.box-shadow(0 1px 2px #000);
+		margin: 50px 0 0;
+	}
+}
+
+
+.noticias-section {
+	clear: both;
+	background: #ffcd2f;
+	padding-bottom: 20px;
+	margin-bottom: 3px;
+	display: block;
+	h1 {
+		text-transform: uppercase;
+		font-size: 26px;
+		color: #ffcd2f;
+		padding: 6px 50px 0 20px;
+		background: #808084;
+		text-align: right;
+		height: 38px;
+		margin:0 0 22px 0;	
+	}
+
+	.lista-noticias{
+		padding: 0 30px;
+
+		.index-image {
+			width: 222px;
+			height:221px;
+			display: block;
+			img{
+				.border-radius(5px);
+			}
+		}
+
+
+		.info-post {
+			display: block;
+			margin:11px 0 30px 30px;
+			background: #ffda65;
+			padding: 12px 23px 3px 23px;
+			overflow:hidden;
+			h2 {	
+				text-transform: uppercase;
+				font-size: 21px;
+				color: #004b85;	
+				margin: 0 0 10px 0; 
+				font-weight: bold;
+				a{
+					text-decoration: none;
+				}
+			}
+
+			.index-date {
+				margin: 0 0 10px 0; 
+			}
+
+			._abstract {
+				margin: 0 0 10px 0; 
+			}
+
+			.html_text {
+				margin: 0 0 10px 0; 
+				overflow:hidden;
+				color: #807f83;
+				height: 80px
+			}
+
+			.vermaspost {
+				margin: 0 0 10px 0; 	
+				display: block;
+				text-align: right;
+				color: #004b85;	
+				margin-right: -13px;
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+.main-footer {
+	color: #fff;
+	background-color: #808084;
+	padding:15px 20px 0px 20px;	
+	text-align: center;
+	margin-bottom: 0;
+	.clearfix();
+	p{
+		margin-bottom: 3px;
+		text-align: center;
+	}
+	
+	.data_fiscal {
+		width: 30px;
+		padding: 0;
+		margin-top: -10px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		img{
+			width: 30px;
+		}
+	}
+
+	.face{
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url(img/logo-face.png);
+		margin-top: -5px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+
+.index-posts {
+	border-top: 3px solid #fff;
+}
+
+.index-posts h1.index {
+	text-transform: uppercase;
+	font-size: 21px;
+	color: #004B85;
+	padding: 20px 100px 0 20px;
+	background: none;
+	height: 38px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.noticias .pagination-posts {
+	text-align:center;
+	font-size: 16px;
+}
+
+.noticias .pagination-posts span {
+	padding: 5px;
+}
+
+.noticias .pagination-posts span a{
+	text-decoration: none;
+}
+
+.noticias p.index-date, .noticias p._abstract{
+	color: #807f83;
+}
+
+.contain {
+	border-top: 3px solid #fff;
+	padding: 35px 20px;
+	background-color: #ffcd2f; 
+	margin-bottom: 3px;
+	min-height: 300px;
+}
+
+.yellow {
+	background: #fccc49; 
+}
+
+.contain .left {
+	width: 339px;
+	float: left;
+	margin: 0 25px 0 0;
+}
+
+.contain .left img{
+	margin-bottom:20px;
+}
+
+.contain .right {
+	width: 520px;
+	float: left;	
+}
+
+.contain h1 {	
+	text-transform: uppercase;
+	font-size: 21px;
+	color: #004b85;	
+	margin: 0 0 10px 0; 
+	font-weight: bold;
+}
+
+.contain .left .gallery ul {
+	width: 345px;
+}
+
+.contain .gallery li {
+	width: 110px;
+	height: 110px;
+	float: left;
+	text-align: center;
+	margin: 0 3px 3px 0;
+}
+
+.empresa {
+	clear: both;
+}
+
+.section-empresa-internal{
+	.gallery-empresa{
+		.gallery{
+			li{
+				width: auto;
+				height: auto;
+				display: block;
+				margin-bottom: 20px;
+				float: none;
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+.section-certificacion-internal {
+	.gallery{
+		li{
+			width: auto;
+			height: auto;
+			margin: 0 30px 20px 0;
+			display: inline-block;
+		}
+	}
+}
+
+.contain div{
+	margin-bottom: 10px;
+}
+
+.empresa .left {
+	margin-right: 40px;
+}
+
+.empresa .left img{
+	margin-bottom: 65px;
+}
+
+.catalogo {	
+	float: left;
+	margin: 0;	
+}
+
+.line {
+	padding: 0 30px 0 0;
+	border-right: 1px solid #fff;
+}
+
+.catalogo div.input input {
+	width: 120px;
+}
+
+.catalogo li {
+	margin: 0 0 10px 0;
+	list-style: none;
+}
+
+.catalogo li a {	
+	color: #004b85;
+	text-decoration: none;	
+	margin-bottom: 10px;
+}
+
+.catalogo h3 {
+	color: #004b85;
+	text-decoration: none;
+	margin: 0 0 15px 0;	
+	font-weight: none;
+}
+
+ul.catalogo li div.input {
+	padding: 5px 0 5px 0; 
+	margin: 0;
+}
+
+ul.catalogo li div.select {
+	padding: 5px 0 0 0; 
+	margin: 0;
+}
+
+ul.catalogo li div.submit {
+	padding: 5px 0 0 0; 
+}
+
+
+ul.ulporcategoria {
+	margin: 0 0 20px 15px; 
+	li{
+		a{
+			display: block;
+			width: 100px;
+			background: url(img/ampliar.png) no-repeat right;
+			padding: 2px 30px 1px 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.BusquedaDirecta select {
+	width: 130px;
+}
+
+.BusquedaAvanzada select {
+	width: 128px;
+}
+
+.BusquedaDirecta {
+	clear: both;
+}
+
+.BusquedaDirecta .Marca, .BusquedaDirecta .Modelo {
+	margin: 0;
+	padding: 0;
+}
+
+.BusquedaCodigo form label, .BusquedaAvanzada form label, .BusquedaDirecta form label {
+	width: 85px;
+	text-align: left;
+	display: block;
+	float:left;
+	padding: 3px 0 0 0;
+} 
+
+.catalogo .BusquedaCodigo {
+	margin-bottom: 20px;
+}
+
+.BusquedaDirecta form label {
+	width: 65px;
+}
+
+.BusquedaDirecta form .submit input {
+	margin-left: 70px;
+}
+
+.BusquedaCodigo form label {
+	width: 95px;
+}
+
+.BusquedaCodigo form .submit input {
+	margin-left: 100px;
+}
+
+.BusquedaAvanzada form label {
+	width: 95px;
+}
+
+.BusquedaAvanzada form .submit input {
+	margin-left: 100px;
+}
+
+.BusquedaCodigo div, .BusquedaAvanzada div, .BusquedaDirecta div {
+	clear: both;
+}
+
+.BusquedaCodigo form input, .BusquedaAvanzada form input, .BusquedaDirecta form input {
+	float:left;	
+} 
+
+
+.catalogo label {
+	margin-right: 5px;
+}
+
+ul.catalogo li div.todosInput, ul.catalogo li div.camposSoloCorona, ul.catalogo li div.camposSoloPiñon {
+	padding: 0;
+}
+
+#product_index table {
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+#product_index table th {
+	background: #fff;
+	color: #808084;
+	padding: 6px 5px;
+	vertical-align: bottom;
+	border: 1px solid #fff;
+}
+
+
+#product_index table td {
+	padding: 5px;
+	border: 1px solid #fff;
+}
+
+.index-agropartes ul li a , .index-album ul li a{
+	font-weight: bold;
+	color: #222;
+	text-decoration: none;	
+	margin-bottom: 10px;
+}
+
+.index-agropartes ul , .index-album ul{
+	margin-left: 60px;
+}
+
+.index-agropartes ul li, .index-album ul li {
+	margin: 0 0 10px 0;
+	list-style: square;
+}
+
+.index-agropartes{
+	.contain_list_image{
+		img{
+			margin: auto;
+		}
+	}
+}
+
+
+.login div {
+	margin-bottom: 5px;
+}
+
+.login form label {
+	width: 98px;
+	text-align: right;
+	display: block;
+	float:left;
+	margin-right: 5px; 
+	padding-top:3px;
+} 
+
+.login form input{
+	float:left;
+} 
+
+.login .submit{
+	margin: 5px 0 0 102px;
+}
+
+.album .gallery li {
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 150px;
+	height: 120px;
+}
+
+.welcome, h1.order-title {
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.info_cliente .contain_welcome {
+	background-color: #ffdf7c;
+	border-top: 4px solid #024c85;
+	padding: 8px;
+	margin-bottom: 7px;
+}
+
+.green .info_cliente .contain_welcome {
+	border-top: 4px solid #00853E;
+}
+
+.puntos, .text_puntos {
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+	margin-bottom: 4px;
+}
+
+.puntos {
+	color: #024c85;
+	font-weight: bold;
+}
+
+.estimado {
+	color: #024c85;
+	text-transform: uppercase;
+	margin-bottom: 15px;	
+}
+
+.nota {
+	color: #000;
+	margin-bottom: 15px;
+}
+
+.texto_dinamico {
+	margin: 0;
+}
+
+.texto_dinamico p {
+	color: #000;
+	margin-bottom: 15px;
+}
+
+.texto_dinamico p.pregunta {
+	color: #024c85;
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.info_cliente .texto {
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+.points {
+	font-size: 18px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.green .points {
+	color: #00853E;
+}
+
+
+.club_index .index-award {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.index-award .index-name {
+	border-top: 4px solid #024c85;
+	background-color:#fff;
+	padding: 5px;
+	clear: both;
+	margin: 0;
+}
+
+.index-award .new {
+	background: #fff url(img/producto_nuevo.png) no-repeat right;
+}
+
+.green .index-award .index-name {
+	border-top: 4px solid #00853E;
+}
+
+.index-award .index-info {
+	border-bottom: 4px solid #024c85;
+	background-color:#ffdf7c;
+	padding: 25px;
+	clear: both;
+}
+
+.green .index-award .index-info {
+	border-bottom: 4px solid #00853E;
+}
+
+
+
+
+/*
+.index-award .index-image {
+	margin: 0 15px 0px 0;
+
+}
+
+.index-award .index-info h2 {
+	margin: 0 0 6px 0;
+	font-size: 15px;
+}
+
+.index-award .index-info .points {
+	margin-top: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: right;
+}
+*/
+
+.contact_send{
+	/*margin-left: 10px;*/
+}
+.contact_send form {
+	width: 70%;
+	margin: auto;
+}
+.contact_send form fieldset legend {
+	display: none;
+}
+.contact_send form div {
+/*	padding: .5em;*/
+	vertical-align: text-top;
+}
+.contact_send form .required label:after {
+	display:inline;
+}
+.contact_send form label {
+	display: block;
+	margin-bottom: .2em;
+	font-size: 12px;
+}
+.contact_send form input, .contact_send form textarea{
+	font-size: 1.1em;
+	clear: both;
+	padding: .25em;
+	width: 100%;
+	font-family: inherit;
+}
+.contact_send form textarea{
+	height: 6em;
+	overflow: auto;
+}
+
+.contact_send form .submit input {
+	width: 87px;
+	height: 37px;
+/*	background: url('img/enviar.jpg') no-repeat;*/
+	border:0;
+	float:right;
+	margin-right: 20px;
+}
+
+.contact_send h1 {
+	padding-top:0px;
+	margin-top:-15px;
+}
+
+
+
+.title_line_color {
+	margin: 0 0 0 0;
+	text-transform: uppercase;
+	font-size: 23px;
+	color: #ffcd2f;
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	background-color: #00853e;
+	border-top: 3px solid #fff; 
+}
+
+.blue {
+	background-color: #004b85;	
+}
+
+.product_catalogo {
+	border: none;
+	padding: 60px 27px 0px 27px;
+}
+
+.index-agropartes {
+	border: none;
+	padding: 60px 27px 0px 27px;
+	
+	.image_agro img {
+		.border-radius(5px);
+	}
+
+}
+
+
+
+.product_index_container {
+	clear: both;
+}
+
+.login h1 {
+	color: #004B85;
+	margin-bottom: 20px;
+}
+
+.login .input {
+	margin-bottom: 20px;
+	clear: both;
+}
+
+.login {
+	padding-top: 20px;
+}
+
+.contain_login {
+	max-width: 400px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.img_beneficio_fija {
+	margin: 60px auto 0;
+	display: block;
+	text-align: center;
+}
+
+.info_cliente {
+}
+
+.info_cliente .logo-club {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.info_cliente .logo-club img{	
+	padding: 0;
+	margin: 0;
+}
+
+
+.club_index .right {
+	margin-top: -22px;
+}
+
+.index-award .index-name h2 {
+	color: #114c82;
+	font-size: 18px;
+	padding: 20px 0 20px 14px;
+	display: block;	
+	float: left;
+}
+
+.index-award .index-image-award {
+	width: 158px;
+	height: 107px;
+	margin: 0px;
+	float: left;
+}
+
+.index-info .gallery {
+	margin: 20px 0 0 0;
+}
+
+.index-info .gallery li {
+	width: 60px;
+	height: 60px;
+}
+
+.center {
+	text-align: center;
+	font-weight: bold;
+}
+
+.main .club_index #flashMessage {
+	margin-bottom: 25px;
+}
+
+.slicknav_menu {
+	display:none;
+	background-color: transparent;
+	.slicknav_icon-bar{
+		background-color: #ffcd2f;
+	}
+
+	.slicknav_row:hover{
+		background-color: #ffcd2f;
+	}
+}
+.block-table-cart {
+	table {
+		thead {
+			tr {
+				th {
+					background-color: #808084;
+					color: #ffc425;
+				}
+			}
+		}
+	}
+}
+.block-table-cart-footer{
+	background-color: #ffc425;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	text-transform: uppercase;
+	padding: 15px;
+	clear: both;
+	margin-bottom: 20px;
+	.input.textarea {
+		display: block;
+		label {
+			display: block;
+			font-weight: bold;
+		}
+		textarea {
+			width: 100%;
+			border: 1px solid #ddd;
+			-webkit-border-radius: 7px;
+			-moz-border-radius: 7px;
+			border-radius: 7px;
+			min-height: 100px;
+		}
+	}
+}
+.order-form {
+	margin-bottom: 30px;
+}
+.order-form label {
+	font-weight: bold;
+}
+.login-header{
+	margin: 10px auto;
+}

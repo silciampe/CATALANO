@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Properties>
+  <tableOfContent>
+    <tocData>
+      <pageNumber value="1" />
+      <title value="" />
+      <children />
+    </tocData>
+  </tableOfContent>
+  <bookProperties>
+    <pages>
+      <defaultValue>
+        <BGColor value="#FFFFFF" />
+        <width value="595" />
+        <height value="842" />
+        <slideshowDelay value="2000" />
+      </defaultValue>
+      <elements>
+        <page>
+          <links />
+          <id value="1" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="2" />
+          <height value="841" />
+          <format value="png" />
+        </page>
+        <page>
+          <links />
+          <id value="3" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="4" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="5" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="6" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="7" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="8" />
+          <height value="841" />
+          <format value="png" />
+        </page>
+        <page>
+          <links />
+          <id value="9" />
+        </page>
+        <page>
+          <links />
+          <id value="10" />
+        </page>
+        <page>
+          <links />
+          <id value="11" />
+        </page>
+        <page>
+          <links />
+          <id value="12" />
+        </page>
+        <page>
+          <links />
+          <id value="13" />
+        </page>
+        <page>
+          <links />
+          <id value="14" />
+        </page>
+        <page>
+          <links />
+          <id value="15" />
+        </page>
+        <page>
+          <links />
+          <id value="16" />
+        </page>
+        <page>
+          <links />
+          <id value="17" />
+        </page>
+        <page>
+          <links />
+          <id value="18" />
+        </page>
+        <page>
+          <links />
+          <id value="19" />
+        </page>
+        <page>
+          <links />
+          <id value="20" />
+        </page>
+        <page>
+          <links />
+          <id value="21" />
+        </page>
+        <page>
+          <links />
+          <id value="22" />
+        </page>
+        <page>
+          <links />
+          <id value="23" />
+        </page>
+        <page>
+          <links />
+          <id value="24" />
+        </page>
+        <page>
+          <links />
+          <id value="25" />
+        </page>
+        <page>
+          <links />
+          <id value="26" />
+        </page>
+        <page>
+          <links />
+          <id value="27" />
+        </page>
+        <page>
+          <links />
+          <id value="28" />
+        </page>
+        <page>
+          <links />
+          <id value="29" />
+        </page>
+        <page>
+          <links />
+          <id value="30" />
+        </page>
+        <page>
+          <links />
+          <id value="31" />
+        </page>
+        <page>
+          <links />
+          <id value="32" />
+        </page>
+        <page>
+          <links />
+          <id value="33" />
+        </page>
+        <page>
+          <links />
+          <id value="34" />
+        </page>
+        <page>
+          <links />
+          <id value="35" />
+        </page>
+        <page>
+          <links />
+          <id value="36" />
+        </page>
+        <page>
+          <links />
+          <id value="37" />
+        </page>
+        <page>
+          <links />
+          <id value="38" />
+        </page>
+        <page>
+          <links />
+          <id value="39" />
+        </page>
+        <page>
+          <links />
+          <id value="40" />
+        </page>
+        <page>
+          <links />
+          <id value="41" />
+        </page>
+        <page>
+          <links />
+          <id value="42" />
+        </page>
+        <page>
+          <links />
+          <id value="43" />
+        </page>
+        <page>
+          <links />
+          <id value="44" />
+        </page>
+        <page>
+          <links />
+          <id value="45" />
+        </page>
+        <page>
+          <links />
+          <id value="46" />
+        </page>
+        <page>
+          <links />
+          <id value="47" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="48" />
+          <height value="841" />
+          <format value="png" />
+        </page>
+        <page>
+          <links />
+          <id value="49" />
+        </page>
+        <page>
+          <links />
+          <id value="50" />
+        </page>
+        <page>
+          <links />
+          <id value="51" />
+        </page>
+        <page>
+          <links />
+          <id value="52" />
+        </page>
+        <page>
+          <links />
+          <id value="53" />
+        </page>
+        <page>
+          <links />
+          <id value="54" />
+        </page>
+        <page>
+          <links />
+          <id value="55" />
+        </page>
+        <page>
+          <links />
+          <id value="56" />
+        </page>
+        <page>
+          <links />
+          <id value="57" />
+        </page>
+        <page>
+          <links />
+          <id value="58" />
+        </page>
+        <page>
+          <links />
+          <id value="59" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="60" />
+          <height value="841" />
+          <format value="png" />
+        </page>
+        <page>
+          <links />
+          <id value="61" />
+        </page>
+        <page>
+          <links />
+          <id value="62" />
+        </page>
+        <page>
+          <links />
+          <id value="63" />
+        </page>
+        <page>
+          <links />
+          <id value="64" />
+        </page>
+        <page>
+          <links />
+          <id value="65" />
+        </page>
+        <page>
+          <links />
+          <id value="66" />
+        </page>
+        <page>
+          <links />
+          <id value="67" />
+        </page>
+        <page>
+          <links />
+          <id value="68" />
+        </page>
+        <page>
+          <links />
+          <id value="69" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="70" />
+          <height value="841" />
+          <format value="png" />
+        </page>
+        <page>
+          <links />
+          <id value="71" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="72" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="73" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="74" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="75" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="76" />
+          <height value="841" />
+        </page>
+        <page>
+          <links />
+          <id value="77" />
+        </page>
+        <page>
+          <links />
+          <id value="78" />
+        </page>
+        <page>
+          <links />
+          <id value="79" />
+        </page>
+        <page>
+          <links />
+          <id value="80" />
+        </page>
+        <page>
+          <links />
+          <id value="81" />
+        </page>
+        <page>
+          <links />
+          <id value="82" />
+        </page>
+        <page>
+          <links />
+          <id value="83" />
+        </page>
+        <page>
+          <links />
+          <id value="84" />
+        </page>
+        <page>
+          <links />
+          <id value="85" />
+        </page>
+      </elements>
+    </pages>
+    <searchIndex ext="search/searchtext.xml" />
+    <bookId value="98e5f3b2-ab80-423c-bc32-4b855c14b4cd" />
+    <bookWidth value="595" />
+    <bookHeight value="841" />
+    <bookName value="Catalago Agro" />
+    <bookBG src="image/grey-inner.jpg" scale="scale" width="1000" height="1000" color="#7D8489" />
+    <searchVisible value="false" />
+    <navigationVisible value="true" />
+    <singlePageMode value="false" />
+    <rightToLeftMode value="false" />
+    <hardCover value="false" border="false" color="#F5AB6E" width="15" height="15" />
+    <skin style="ClassicGrey" />
+    <tocVisible value="false" />
+    <slideshowVisible value="true" />
+    <bookmarksVisible value="true" />
+    <bookLang value="en" />
+    <sessionRestore value="false" />
+  </bookProperties>
+</Properties>

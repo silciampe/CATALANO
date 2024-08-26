@@ -1,0 +1,125 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+
+@media (max-width: @screen-xs-max) {
+	/* #menu is the original menu */
+	.js .sf-menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+	
+
+	.noticias-section {
+		.lista-noticias{
+			padding: 0 15px;
+			.info-post {
+				margin:11px 0 30px 0;
+			}
+		}
+	}
+
+	.main-footer{
+		p{
+			padding: 10px 0;
+		}
+	}
+
+	.line{
+		border-right: none;
+		padding: 30px 0;
+	}
+
+
+	div.club {
+		h2{
+			margin: 20px 0;
+		}
+		
+		.btn-club{
+			margin: 20px 0 0;
+		}
+	}
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	/* #menu is the original menu */
+	.js .sf-menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+	
+
+	.section-empresa {
+	
+		.derecha{
+			.empresa-historia {
+				height: 98px;
+				padding-top: 40px;
+			
+		
+			}
+
+			.certificados {
+				
+				.conatain-certificados {
+					ul{
+						li{
+							margin:36px 25px 10px;
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+
+}
+@media (min-width: @screen-lg-min) {
+	.container {
+	    width: 970px;
+	}
+}
