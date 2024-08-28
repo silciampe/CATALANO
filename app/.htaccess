@@ -1,8 +1,9 @@
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /catalano/
+    RewriteBase /
+    RewriteRule ^index.php$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /catalano/index.php [L]
-    </IfModule>
+    RewriteRule . /index.php [L]
+    RewriteCond %{SERVER_PORT} 8080
+</IfModule>

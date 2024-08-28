@@ -132,6 +132,7 @@ Configure::write('isLocal', $isLocal);
  * thus not recommended for production applications.
  */
 	//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
+	//Configure::write('App.baseUrl', "http:////localhost:8080//catalano");
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.
