@@ -22,18 +22,17 @@
 				<ul>
 					<li><a href="<?php echo $pdf['BrwFile']['moto']['path']; ?>" target="_blank">Catalogo online</a></li>
 					<li><a href="<?php echo Router::url(array('controller' => 'products', 'action' => 'catalogo')) ?>">Busqueda</a></li>
-					<li><a href="<?php echo Router::url(array('controller' => 'orders', 'action' => 'add')) ?>">Carro de pedidos</a></li>
+					
 				</ul>
 			</li>
-			<li>
-				<a href="<?php echo Router::url(array('controller' => 'agropartes', 'action' => 'index')) ?>" class="agropartes
+				<li><a href="<?php echo Router::url(array('controller' => 'agropartes', 'action' => 'index')) ?>" class="agropartes
 			<?php if (!empty($selectedAgroPartes)) {
 				echo ' selected';
 			} ?>
 			">Agropartes</a>
 				<ul>
 					<li><a href="<?php echo $pdf['BrwFile']['agro']['path']; ?>" target="_blank">Catalogo online</a></li>
-					<?php echo Router::url(array('controller' => 'agro_products', 'action' => 'catalogo')) ?>">Busqueda</a></li>
+					<li><a href="<?php echo Router::url(array('controller' => 'agro_products', 'action' => 'catalogo')) ?>">Busqueda</a></li>
 					<li><a href="<?php echo Router::url(array('controller' => 'agropartes', 'action' => 'index')) ?>">Imagenes</a></li>
 				</ul>
 			</li>

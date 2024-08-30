@@ -4,6 +4,7 @@ $(document).ready(function(){
 	busquedaCodigo();	
 	busquedaAvanzada();	*/
 	busquedaAvanzadaGrupo();	
+	busquedaAvanzadaGrupo1();	
 	busquedaAvanzadaGrupoChangeSelect();
 	marcasList();
 	marcasListChangeSelect();	
@@ -63,6 +64,13 @@ function busquedaCodigo(){
 	});
 }
 
+function busquedaModelo(){
+	$('a.BusquedaModelo').click(function(){
+		$('div.BusquedaModelo').toggle();
+	});
+}
+
+
 function busquedaAvanzada(){
 	$('a.BusquedaAvanzada').click(function(){
 		$('div.BusquedaAvanzada').toggle();
@@ -70,8 +78,6 @@ function busquedaAvanzada(){
 		busquedaAvanzadaGrupoChangeSelect();
 	});
 }
-
-
 
 function busquedaAvanzadaGrupo(){	
 	productGrupo = $('#ProductGrupo').val();	
@@ -92,9 +98,108 @@ function busquedaAvanzadaGrupo(){
 	}
 }
 
+/*
+function busquedaAvanzada1(){
+	$('a.BusquedaAvanzada1').click(function(){
+		$('div.BusquedaAvanzada1').toggle();
+		busquedaAvanzadaGrupo1();
+		busquedaAvanzadaGrupoChangeSelect1();
+	});	
+}	
+
+
+function busquedaAvanzadaGrupo1(){	
+	AgroProductGrupo = $('#AgroProductGrupo').val();	
+    
+	$('.todosInput1').hide();
+    $('.camposSoloDiscosDentados').hide();
+    $('.camposSoloDiscosCuchillas').hide();
+    $('.camposSoloMediaLlanta').hide();
+
+	switch(AgroProductGrupo) {
+	case 'empty':
+				
+		break;
+		case 'DISCOS DENTADOS':
+			$('.todosInput1').show();
+			$('.camposSoloDiscosDentados').show();			
+			$('.camposSoloDiscosCuchillas').hide();	
+			$('.camposSoloMediaLlanta').hide();	
+		break;
+		case 'DISCOS Y CUCHILLAS':
+			$('.todosInput1').show();
+			$('.camposSoloDiscosDentados').hide();			
+			$('.camposSoloDiscosCuchillas').show();	
+			$('.camposSoloMediaLlanta').hide();	
+		break;
+		case 'MEDIA LLANTA NATURAL':
+			$('.todosInput1').show();
+			$('.camposSoloDiscosDentados').hide();			
+			$('.camposSoloDiscosCuchillas').hide();	
+			$('.camposSoloMediaLlanta').show();	
+		break;
+}
+}
+*/
+$(document).ready(function() {
+    // Ocultar todos los campos al cargar la página
+    $('.todosInput1').hide();
+    $('.camposSoloDiscosDentados').hide();
+    $('.camposSoloDiscosCuchillas').hide();
+    $('.camposSoloMediaLlanta').hide();
+
+    // Asignar el evento click al ancla de búsqueda avanzada
+    $('a.BusquedaAvanzada1').click(function() {
+        $('div.BusquedaAvanzada1').toggle();
+        busquedaAvanzadaGrupo1(); // Actualiza los campos al mostrar el div
+    });
+
+    // Asignar el evento change al select de grupo solo una vez
+    $("#AgroProductGrupo").change(busquedaAvanzadaGrupo1);
+});
+
+function busquedaAvanzadaGrupo1() {
+    var AgroProductGrupo = $('#AgroProductGrupo').val();
+
+    // Oculta todos los campos al iniciar
+    $('.todosInput1').hide();
+    $('.camposSoloDiscosDentados').hide();
+    $('.camposSoloDiscosCuchillas').hide();
+    $('.camposSoloMediaLlanta').hide();
+
+    // Muestra los campos según la selección
+    switch (AgroProductGrupo) {
+        case 'DISCOS DENTADOS':
+            $('.todosInput1').show();
+            $('.camposSoloDiscosDentados').show();
+            break;
+        case 'DISCOS Y CUCHILLAS':
+            $('.todosInput1').show();
+            $('.camposSoloDiscosCuchillas').show();
+            break;
+        case 'MEDIA LLANTA NATURAL':
+            $('.todosInput1').show();
+            $('.camposSoloMediaLlanta').show();
+            break;
+        default:
+            // Si se selecciona 'empty' u otra opción no manejada, se ocultan todos los campos
+            break;
+    }
+}
+
+
+
+function busquedaAvanzadaGrupoChangeSelect1(){
+	$("#AgroProductGrupo").change(busquedaAvanzadaGrupo1);
+}
+
+
+
 function busquedaAvanzadaGrupoChangeSelect(){
 	$("#ProductGrupo").change(busquedaAvanzadaGrupo);
 }
+
+
 
 function marcasListChangeSelect(){
 	$("#ProductGrupoDirecta").change(marcasList);	

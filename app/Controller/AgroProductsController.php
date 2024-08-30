@@ -9,11 +9,11 @@ class AgroProductsController extends AppController
     function search_filter_redirect()
     {
         $grupo = $grupoDirecta = $id_catalano = $codigo_original = $marca = $marcaDirecta = $modelo = $modeloDirecta  = $dtes =  $cad = $diam_int = $diam_ex = $can_diam = $diam_rod = $paso_esp = $est_x_esp = null;
-        if (!empty($this->data['AgroProduct']['grupo']) and ($this->data['AgroProduct']['grupo'] == 'CORONA' or $this->data['AgroProduct']['grupo'] == 'PIÑON')) {
+        if (!empty($this->data['AgroProduct']['grupo']) and ($this->data['AgroProduct']['grupo'] == 'MEDIA LLANTA NATURAL' or $this->data['AgroProduct']['grupo'] == 'DISCOS DENTADOS' or $this->data['AgroProduct']['grupo'] == 'DISCOS Y CUCHILLAS')) {
             $grupo = $this->data['AgroProduct']['grupo'];
         }
 
-        if (!empty($this->data['AgroProduct']['grupoDirecta']) and ($this->data['AgroProduct']['grupoDirecta'] == 'CORONA' or $this->data['AgroProduct']['grupoDirecta'] == 'PIÑON')) {
+        if (!empty($this->data['AgroProduct']['grupoDirecta']) and ($this->data['AgroProduct']['grupoDirecta'] == 'MEDIA LLANTA NATURAL' or $this->data['AgroProduct']['grupoDirecta'] == 'DISCOS DENTADOS' or $this->data['AgroProduct']['grupoDirecta'] == 'DISCOS Y CUCHILLAS')) {
             $grupoDirecta = $this->data['AgroProduct']['grupoDirecta'];
         }
 

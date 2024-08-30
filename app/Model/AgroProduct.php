@@ -19,6 +19,7 @@ class AgroProduct extends AppModel
 			),
 		),
 		'actions' => array(
+			'export' => true,
 			'import' => true,
 		),
 		'export' => array('type' => 'xlsx'),
@@ -38,49 +39,49 @@ class AgroProduct extends AppModel
 			$conditions['AgroProduct.id_catalano'] = $id_catalano;
 		}
 
-		// if (!empty($codigo_original)) {
-		//     $conditions['AgroProduct.codigo_original LIKE'] = '%' . $codigo_original . '%';
-		// }
+		if (!empty($codigo_original)) {
+		     $conditions['AgroProduct.codigo_original LIKE'] = '%' . $codigo_original . '%';
+		}
 
-		// if (!empty($marca)) {
-		//     $conditions['AgroProduct.marca LIKE'] = '%' . $marca . '%';
-		// }
+		if (!empty($marca)) {
+		     $conditions['AgroProduct.marca LIKE'] = '%' . $marca . '%';
+		}
 
-		// if (!empty($modelo)) {
-		//     $conditions['AgroProduct.modelo LIKE'] = '%' . $modelo . '%';
-		// }
+		if (!empty($modelo)) {
+		    $conditions['AgroProduct.modelo LIKE'] = '%' . $modelo . '%';
+		 }
 
-		// if (!empty($dtes)) {
-		//     $conditions['AgroProduct.dtes'] = $dtes;
-		// }
+		 if (!empty($dtes)) {
+		    $conditions['AgroProduct.dtes'] = $dtes;
+		 }
 
-		// if (!empty($cad)) {
-		//     $conditions['AgroProduct.cad'] = $cad;
-		// }
+		if (!empty($cad)) {
+		    $conditions['AgroProduct.cad'] = $cad;
+		}
 
-		// if (!empty($diam_int)) {
-		//     $conditions['AgroProduct.diam_int'] = $diam_int;
-		// }
+		if (!empty($diam_int)) {
+		     $conditions['AgroProduct.diam_int'] = $diam_int;
+		}
 
-		// if (!empty($diam_ex)) {
-		//     $conditions['AgroProduct.diam_ex'] = $diam_ex;
-		// }
+		if (!empty($diam_ex)) {
+		    $conditions['AgroProduct.diam_ex'] = $diam_ex;
+		}
 
-		// if (!empty($can_diam)) {
-		//     $conditions['AgroProduct.can_diam LIKE'] = '%' . $can_diam . '%';
-		// }
+		if (!empty($can_diam)) {
+		    $conditions['AgroProduct.can_diam LIKE'] = '%' . $can_diam . '%';
+		}
 
-		// if (!empty($diam_rod)) {
-		//     $conditions['AgroProduct.diam_rod'] = $diam_rod;
-		// }
+		if (!empty($diam_rod)) {
+		    $conditions['AgroProduct.diam_rod'] = $diam_rod;
+		}
 
-		// if (!empty($paso_esp)) {
-		//     $conditions['AgroProduct.paso_esp LIKE'] = '%' . $paso_esp . '%';
-		// }
-
-		// if (!empty($est_x_esp)) {
-		//     $conditions['AgroProduct.est_x_esp LIKE'] = '%' . $est_x_esp . '%';
-		// }
+		if (!empty($paso_esp)) {
+		    $conditions['AgroProduct.paso_esp LIKE'] = '%' . $paso_esp . '%';
+		}
+	
+		if (!empty($est_x_esp)) {
+		     $conditions['AgroProduct.est_x_esp LIKE'] = '%' . $est_x_esp . '%';
+		}
 		$products = $this->find('all', array(
 			'conditions' => $conditions,
 		));
@@ -169,7 +170,7 @@ class AgroProduct extends AppModel
 			$producto = str_replace('"', '', $producto);
 			$dataExplode = explode(',', $producto);
 			$grupo = null;
-			$grupoData = trim($dataExplode[0]);
+			$grupoData = trim($dataExplode[1]);
 			$grupoData = (string) $grupoData;
 			$grupoData = utf8_decode($grupoData);
 			switch ($grupoData) {
@@ -178,18 +179,18 @@ class AgroProduct extends AppModel
 					// print_r($dataExplode);
 					$dataSave = array(
 						'id' => null,
-						'id_catalano' => trim($dataExplode[1]),
+						'id_catalano' => trim($dataExplode[2]),
 						'grupo' => $grupo,
 						'modelo' => $grupo,
 						'med_cub' => trim(
-							mb_convert_encoding($dataExplode[2] . ' ' . $dataExplode[3], 'UTF-8', 'UTF-8')
+							mb_convert_encoding($dataExplode[3] . ' ' . $dataExplode[4], 'UTF-8', 'UTF-8')
 						), // med cub
-						'diam_int' => trim($dataExplode[4]),
-						'diam_ex' => trim($dataExplode[5]), // diam E C
-						'can_diam' => trim($dataExplode[6]), //cant diametros por agujero
-						'marca' => trim($dataExplode[7]),
-						'esp_mm' => trim($dataExplode[8]), // esp MM
-						'imagen' => strtolower(trim($dataExplode[9])),
+						'diam_int' => trim($dataExplode[5]),
+						'diam_ex' => trim($dataExplode[6]), // diam E C
+						'can_diam' => trim($dataExplode[7]), //cant diametros por agujero
+						'marca' => trim($dataExplode[8]),
+						'esp_mm' => trim($dataExplode[9]), // esp MM
+						'imagen' => strtolower(trim($dataExplode[10])),
 					);
 					break;
 				case 'DISCOS DENT ASA 40':
@@ -199,12 +200,12 @@ class AgroProduct extends AppModel
 				case 'DISCOS DENT ASA 100':
 					$dataSave = array(
 						'id' => null,
-						'id_catalano' => trim($dataExplode[1]),
+						'id_catalano' => trim($dataExplode[2]),
 						'grupo' => 'DISCOS DENTADOS',
 						'modelo' => $grupoData,
-						'dtes' => $dataExplode[2],
-						'diam_int' => trim($dataExplode[3]),
-						'imagen' => strtolower(trim($dataExplode[4])),
+						'dtes' => $dataExplode[3],
+						'diam_int' => trim($dataExplode[4]),
+						'imagen' => strtolower(trim($dataExplode[5])),
 					);
 					break;
 				case 'DISCOS PLANOS LISOS':
@@ -218,20 +219,22 @@ class AgroProduct extends AppModel
 				case 'CUCHILLAS DURAFLUT 50 ONDAS':
 				case 'DISCOS DE RASTRA':
 				case 'CUCHILLAS DURAFLUT FILO LISO':
+				case 'DISCOS Y CUCHILLAS ESPECIALES':
+				
 					// print_r($dataExplode);
 					$dataSave = array(
 						'id' => null,
-						'id_catalano' => trim($dataExplode[1]),
+						'id_catalano' => trim($dataExplode[2]),
 						'grupo' => 'DISCOS Y CUCHILLAS',
 						'modelo' => $grupoData,
-						'diam_ex' => trim($dataExplode[2]),
-						'esp_mm' => trim($dataExplode[3]), // esp MM
-						'diam_int' => trim($dataExplode[4]),
-						'can_diam' => trim($dataExplode[5]),
-						'rad_mm' => trim($dataExplode[6]), // rad MM
-						'observacion' => trim($dataExplode[7]), //observación
-						'marca' => trim($dataExplode[8]),
-						'imagen' => strtolower(trim($dataExplode[9])),
+						'diam_ex' => trim($dataExplode[3]),
+						'esp_mm' => trim($dataExplode[4]), // esp MM
+						'diam_int' => trim($dataExplode[5]),
+						'can_diam' => trim($dataExplode[6]),
+						'rad_mm' => trim($dataExplode[7]), // rad MM
+						'observacion' => trim($dataExplode[8]), //observación
+						'marca' => trim($dataExplode[9]),
+						'imagen' => strtolower(trim($dataExplode[10])),
 					);
 					break;
 			}
